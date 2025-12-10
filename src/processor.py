@@ -10,7 +10,13 @@ from sentence_transformers import SentenceTransformer
 # 这一步会在第一次运行时下载模型 (~80MB)，后续秒开
 @st.cache_resource
 def load_embedding_model():
-    return SentenceTransformer('all-MiniLM-L6-v2')
+    # 尝试从预下载目录加载
+    try:
+        return SentenceTransformer('/app/model_cache')
+    except:
+        # 兜底：如果预下载失败，再在线加载
+        return SentenceTransformer('all-MiniLM-L6-v2')
+
 
 def process_papers_to_keyword_stars(df: pd.DataFrame, max_stars: int = 150):
     """

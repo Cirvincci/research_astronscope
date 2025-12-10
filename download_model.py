@@ -1,9 +1,8 @@
-# download_model.py
 from sentence_transformers import SentenceTransformer
 import os
 
-# 强制下载到缓存目录
-print("Downloading all-MiniLM-L6-v2...")
+# 设置环境变量，确保下载位置固定
+# 注意：这必须与 Dockerfile 中的 ENV 保持一致，或者干脆依赖默认
+print("Pre-downloading model to default cache...")
 model = SentenceTransformer('all-MiniLM-L6-v2')
-model.save("/app/model_cache") # 保存到固定目录
-print("Model saved to /app/model_cache")
+print("Download complete.")

@@ -9,7 +9,7 @@ license: apache-2.0
 short_description: AI驱动的科研趋势雷达与知识星图
 ---
 
-# 🌌 AI Research Astronscope: AI-Driven Research Trend Radar
+# 🌌 AI Research Astronscope: AI-Driven Research Trend Radar ：AI科研宇宙望星图
 **AI 驱动的科研趋势雷达与知识星图**
 
 > "以宇宙的视角，俯瞰人类知识的疆域。"

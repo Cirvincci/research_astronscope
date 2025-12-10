@@ -1,10 +1,12 @@
 ---
-title: AI Research Astronscope (AI科研宇宙望星图)
+title: AI Research Astronscope
 emoji: 🌌
 colorFrom: indigo
 colorTo: purple
 sdk: docker
 app_port: 7860
+license: apache-2.0
+short_description: AI驱动的科研趋势雷达与知识星图
 ---
 
 # 🌌 AI Research Astronscope: AI-Driven Research Trend Radar

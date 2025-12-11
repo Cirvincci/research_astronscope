@@ -221,4 +221,4 @@ if st.session_state.stars_df is not None:
         st_echarts(option, height="700px", key="map_final")
 
 else:
-    st.info("👈 请在左侧启动观测。")
+    st.info("👈 请在左侧启动观测。探测深度：爬取论文数量；星体上限：最大聚合领域数量。探索特定领域最热最新细化方向的分布！")

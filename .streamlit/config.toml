@@ -1,6 +1,7 @@
 [server]
 headless = true
-enableCORS = false
+fileWatcherType = "none"  # <--- 关掉文件扫描，立刻解决 torch 警告 + 启动慢的问题
+enableCORS = false        # <--- 关掉跨域限制，防止浏览器端的假死断连
 enableXsrfProtection = false
 enableWebsocketCompression = false  # 关键：禁用压缩，防止代理层解压失败导致断连
 port = 7860

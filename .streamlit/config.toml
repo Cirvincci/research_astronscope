@@ -1,20 +1,14 @@
 [server]
-# 关键：禁用文件监视器，解决 torch 路径报错
-fileWatcherType = "none"
-# 禁用 CORS，解决重连问题
+headless = true
 enableCORS = false
-# 禁用 XSRF，解决重连问题
 enableXsrfProtection = false
-# 绑定端口
+enableWebsocketCompression = false  # 关键：禁用压缩，防止代理层解压失败导致断连
 port = 7860
 address = "0.0.0.0"
 
 [browser]
-# 禁用数据收集，提升启动速度
 gatherUsageStats = false
-# 告诉浏览器连接的地址（可选，解决部分反向代理问题）
-serverAddress = "0.0.0.0"
+serverAddress = "0.0.0.0" # 强制指定地址
 
 [runner]
-# 禁用魔术命令检查，进一步省资源
 magicEnabled = false

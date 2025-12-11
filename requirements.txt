@@ -4,4 +4,3 @@ pandas==2.2.0
 numpy==1.26.3
 arxiv==2.1.0
 scikit-learn==1.4.0
-sentence-transformers==2.3.1

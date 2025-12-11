@@ -1,15 +1,26 @@
 [server]
-headless = true
-fileWatcherType = "none"  # <--- 关掉文件扫描，立刻解决 torch 警告 + 启动慢的问题
-enableCORS = false        # <--- 关掉跨域限制，防止浏览器端的假死断连
+# 1. 禁用文件监控 (最重要)
+# 即使没有 PyTorch 了，这个设置也能让 Streamlit 启动更快，防止扫描其他库
+fileWatcherType = "none"
+
+# 2. 网络穿透 (防止创空间 WebSocket 断连)
+enableCORS = false
 enableXsrfProtection = false
-enableWebsocketCompression = false  # 关键：禁用压缩，防止代理层解压失败导致断连
+enableWebsocketCompression = false  # 依然建议关掉压缩，稳字当头
+
+# 3. 端口绑定
 port = 7860
 address = "0.0.0.0"
 
+# 4. 无头模式 (必须)
+headless = true
+
 [browser]
+# 禁用数据收集 (国内网络下这步会卡几秒，关掉它)
 gatherUsageStats = false
-serverAddress = "0.0.0.0" # 强制指定地址
+# 强制指定服务器地址，防止反向代理混乱
+serverAddress = "0.0.0.0"
 
 [runner]
+# 禁用魔术命令 (稍微省点 CPU)
 magicEnabled = false

@@ -32,4 +32,4 @@ RUN python download_model.py
 EXPOSE 7860
 
 # 启动命令
-CMD ["streamlit", "run", "app.py", "--server.port", "7860", "--server.address", "0.0.0.0"]
+CMD ["streamlit", "run", "app.py"]

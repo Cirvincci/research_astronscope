@@ -26,7 +26,6 @@ RUN pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com
 # 复制项目所有代码
 COPY . .
 
-RUN python download_model.py
 
 # 暴露端口
 EXPOSE 7860

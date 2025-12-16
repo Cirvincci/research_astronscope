@@ -1,0 +1,15 @@
+[server]
+headless = true
+fileWatcherType = "none"
+enableCORS = false
+enableXsrfProtection = false
+enableWebsocketCompression = false
+port = 7860
+address = "0.0.0.0"
+
+[browser]
+gatherUsageStats = false
+serverAddress = "0.0.0.0"
+
+[runner]
+magicEnabled = false

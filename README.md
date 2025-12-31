@@ -14,6 +14,7 @@ short_description: AI驱动的科研趋势雷达与知识星图
 
 > "以宇宙的视角，俯瞰人类知识的疆域。"
 
+已部署在：https://www.modelscope.cn/studios/recirdon/AI_research_astronscope 
 AI Research Astronscope 是一个可视化的科研情报分析平台。它摒弃了传统的列表式搜索，利用**语义向量 (Semantic Embedding)** 技术将海量 arXiv 论文映射为一片浩瀚的“知识星云”。在这里，每一颗星体代表一个核心研究领域，星体的大小象征热度，距离代表语义关联。
 
 ## ✨ Core Features (核心功能)
